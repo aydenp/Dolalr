@@ -10,7 +10,7 @@ import UIKit
 
 /// Format a double value like a stopwatch.
 class StopwatchFormattingLabel: DoubleFormattingLabelBase {
-    override func populateValue() {
-        self.text = value.stopwatchFormatted
+    override var formattedValue: String? {
+        return value.stopwatchFormatted
     }
 }

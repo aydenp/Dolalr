@@ -16,7 +16,7 @@ class CurrencyFormattingLabel: DoubleFormattingLabelBase {
         return formatter
     }()
     
-    override func populateValue() {
-        self.text = formatter.string(from: NSNumber(value: value))
+    override var formattedValue: String? {
+        return formatter.string(from: NSNumber(value: value))
     }
 }

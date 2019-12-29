@@ -19,7 +19,11 @@ class DoubleFormattingLabelBase: UILabel {
         didSet { populateValue() }
     }
     
-    open func populateValue() {
-        fatalError("Please override DoubleFormattingLabelBase.populateValue() in your subclass.")
+    private func populateValue() {
+        self.text = formattedValue
+    }
+    
+    open var formattedValue: String? {
+        fatalError("Please override DoubleFormattingLabelBase.formattedValue in your subclass.")
     }
 }
