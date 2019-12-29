@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dolalr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBS-DR-lpr">
+                                <rect key="frame" x="24" y="64" width="366" height="728"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Siw-04-THV">
+                                        <rect key="frame" x="0.0" y="262" width="366" height="204.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rTF-kc-PlF">
+                                                <rect key="frame" x="67.5" y="0.0" width="231" height="98"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU'VE WORKED FOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8m-qs-FPv">
+                                                        <rect key="frame" x="46" y="0.0" width="139.5" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        <color key="textColor" name="header"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ceo-QZ-CgQ" customClass="StopwatchFormattingLabel" customModule="Dolalr" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="24" width="231" height="74"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="62"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="M1N-ZN-x8G">
+                                                <rect key="frame" x="122" y="138" width="122" height="66.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AND YOU'VE MADE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDE-Cl-wOy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="122" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        <color key="textColor" name="header"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="S5t-Le-0kd" customClass="CurrencyFormattingLabel" customModule="Dolalr" customModuleProvider="target">
+                                                        <rect key="frame" x="15.5" y="28" width="91" height="38.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                                        <color key="textColor" name="brand"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Siw-04-THV" secondAttribute="trailing" id="02p-Fe-7QV"/>
+                                    <constraint firstItem="Siw-04-THV" firstAttribute="leading" secondItem="JBS-DR-lpr" secondAttribute="leading" id="3aN-Z6-U2C"/>
+                                    <constraint firstItem="Siw-04-THV" firstAttribute="centerY" secondItem="JBS-DR-lpr" secondAttribute="centerY" id="FjH-uu-UMM"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pW4-PT-J14">
+                                <rect key="frame" x="24" y="812" width="366" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgW-VR-UNh">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="30"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="startStopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B5Z-ah-Qwo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c87-ng-DRB">
+                                        <rect key="frame" x="189" y="0.0" width="177" height="30"/>
+                                        <state key="normal" title="Set Rate"/>
+                                        <connections>
+                                            <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ijo-Ai-ZZT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pW4-PT-J14" firstAttribute="leading" secondItem="JBS-DR-lpr" secondAttribute="leading" id="RJH-Dl-RrX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pW4-PT-J14" secondAttribute="bottom" constant="20" id="RtF-tg-o9Q"/>
+                            <constraint firstItem="pW4-PT-J14" firstAttribute="top" secondItem="JBS-DR-lpr" secondAttribute="bottom" constant="20" id="VAF-tc-sDR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JBS-DR-lpr" secondAttribute="trailing" constant="24" id="XLp-yR-vsc"/>
+                            <constraint firstItem="JBS-DR-lpr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="n49-Pm-qaW"/>
+                            <constraint firstItem="pW4-PT-J14" firstAttribute="trailing" secondItem="JBS-DR-lpr" secondAttribute="trailing" id="pqe-KO-ui9"/>
+                            <constraint firstItem="JBS-DR-lpr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zoz-gf-8F6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dollarLabel" destination="S5t-Le-0kd" id="N6N-XJ-QTB"/>
+                        <outlet property="resetButton" destination="c87-ng-DRB" id="IIt-7X-svH"/>
+                        <outlet property="startPauseButton" destination="fgW-VR-UNh" id="I8f-SQ-NwR"/>
+                        <outlet property="stopwatchLabel" destination="Ceo-QZ-CgQ" id="erb-SS-IUr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="brand">
+            <color red="0.0" green="0.68599998950958252" blue="0.14699999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="header">
+            <color white="0.59700000286102295" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+    </resources>
+</document>
