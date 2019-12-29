@@ -23,16 +23,18 @@ class ViewController: UIViewController {
         stopwatchLabel.font = .monospacedDigitSystemFont(ofSize: 62, weight: .semibold)
         dollarLabel.font = .monospacedDigitSystemFont(ofSize: 32, weight: .semibold)
         
-        // Setup
+        // Setup UI
         updateUIState()
     }
     
+    /// Sets label values (called upon UI state update or, if stopwatch running, every frame)
     @objc private func tick() {
         let duration = Stopwatch.shared.duration ?? 0
         stopwatchLabel.value = duration
         dollarLabel.value = duration / 60 / 60 * Settings.hourlyRate
     }
     
+    /// Tapped the start/resume/pause button
     @IBAction func startStopTapped(_ sender: Any) {
         if Stopwatch.shared.state == .stopped { // Start button
             Stopwatch.shared.start()
@@ -42,8 +44,10 @@ class ViewController: UIViewController {
         updateUIState()
     }
     
+    /// Tapped the reset/set rate button
     @IBAction func resetTapped(_ sender: Any) {
         if Stopwatch.shared.state == .stopped { // Set Rate button
+            // Show an alert to ask user for their desired hourly rate
             let alert = UIAlertController.createAlert(title: "Set Rate", message: "Enter your hourly rate in your local currency", actions: [.cancel])
             
             alert.addAction(.normal("Set Rate") { _ in
@@ -64,18 +68,23 @@ class ViewController: UIViewController {
         updateUIState()
     }
     
+    /// Update the UI state to match that of the stopwatch
     private func updateUIState() {
+        // Invalidate the old display link
         displayLink?.invalidate()
         
         let state = Stopwatch.shared.state
         
+        // Setup button states
         startPauseButton.setTitle(state != .stopped ? (state == .paused ? "Resume" : "Pause") : "Start", for: .normal)
         
         resetButton.setTitle(state == .stopped ? "Set Rate" : "Reset", for: .normal)
         resetButton.isEnabled = state != .running
         
+        // Update stopwatch time
         tick()
         if state == .running {
+            // If the stopwatch is running, setup a display link to update the labels on every frame
             displayLink = CADisplayLink(target: self, selector: #selector(tick))
             displayLink!.add(to: .current, forMode: .common)
         }

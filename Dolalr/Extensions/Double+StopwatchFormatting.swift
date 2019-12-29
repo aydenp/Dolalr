@@ -16,10 +16,10 @@ extension Double {
         let hour = Int(self) / 60 / 60
         
         if hour > 0 {
-            // HH:mm:ss
+            // has hours, format as: HH:mm:ss
             return String(format: "%0d:%02d:%02d", hour, min, sec)
         }
-        // mm:ss.ms
+        // otherwise: mm:ss.ms
         return String(format: "%02d:%02d.%02d", min, sec, frac)
     }
 }

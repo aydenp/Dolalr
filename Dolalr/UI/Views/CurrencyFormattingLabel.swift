@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Format a double value as currency.
 class CurrencyFormattingLabel: DoubleFormattingLabelBase {
     var formatter = { () -> NumberFormatter in
         let formatter = NumberFormatter()

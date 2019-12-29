@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// A label class that automatically formats a provided double value in `populateValue()`.
 class DoubleFormattingLabelBase: UILabel {
     override func didMoveToWindow() {
         super.didMoveToWindow()
@@ -19,6 +20,6 @@ class DoubleFormattingLabelBase: UILabel {
     }
     
     open func populateValue() {
-        fatalError("Please override DoubleFormattingLabelBase.populateValue() in your class.")
+        fatalError("Please override DoubleFormattingLabelBase.populateValue() in your subclass.")
     }
 }

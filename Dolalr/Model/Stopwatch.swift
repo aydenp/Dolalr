@@ -13,14 +13,17 @@ class Stopwatch {
     
     // MARK: - Values (persistent)
     
+    /// If this stopwatch is actively running, the time it was started at.
     @UserDefault("startTime", defaultValue: nil)
     private var startTime: CFTimeInterval?
     
+    /// If this stopwatch was paused, the duration at the time it was paused.
     @UserDefault("pausedAtDuration", defaultValue: nil)
     private var pausedAtDuration: CFTimeInterval?
     
     // MARK: - State
     
+    /// The current duration of this stopwatch, if running or paused.
     var duration: CFTimeInterval? {
         if let startTime = startTime {
             return CACurrentMediaTime() - startTime
@@ -31,9 +34,15 @@ class Stopwatch {
     }
     
     enum State {
-        case running, paused, stopped
+        /// The stopwatch was started and is actively counting up.
+        case running
+        /// The stopwatch was started but paused.
+        case paused
+        /// The stopwatch has not been started at all.
+        case stopped
     }
     
+    /// The current state of this stopwatch.
     var state: State {
         if startTime != nil {
             return .running
