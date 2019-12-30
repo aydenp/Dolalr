@@ -31,7 +31,7 @@
                                                         <color key="textColor" name="header"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ceo-QZ-CgQ" customClass="StopwatchFormattingLabel" customModule="Dolalr" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ceo-QZ-CgQ" customClass="StopwatchFormattingLabel" customModule="Dolalr" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="24" width="231" height="74"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="62"/>
                                                         <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                                                         <color key="textColor" name="header"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="S5t-Le-0kd" customClass="CurrencyFormattingLabel" customModule="Dolalr" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="S5t-Le-0kd" customClass="CurrencyFormattingLabel" customModule="Dolalr" customModuleProvider="target">
                                                         <rect key="frame" x="15.5" y="28" width="91" height="38.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                                         <color key="textColor" name="brand"/>
@@ -67,31 +67,40 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pW4-PT-J14">
                                 <rect key="frame" x="24" y="812" width="366" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgW-VR-UNh">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgW-VR-UNh" customClass="ProminentRoundedButton" customModule="Dolalr" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="177" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="Start"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPrimary" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="startStopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B5Z-ah-Qwo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c87-ng-DRB">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c87-ng-DRB" customClass="RoundedButton" customModule="Dolalr" customModuleProvider="target">
                                         <rect key="frame" x="189" y="0.0" width="177" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="Set Rate"/>
                                         <connections>
                                             <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ijo-Ai-ZZT"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="8tN-lF-r1b"/>
+                                </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="pW4-PT-J14" firstAttribute="leading" secondItem="JBS-DR-lpr" secondAttribute="leading" id="RJH-Dl-RrX"/>
+                            <constraint firstItem="pW4-PT-J14" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2ZV-4K-kc8"/>
+                            <constraint firstItem="pW4-PT-J14" firstAttribute="leading" secondItem="JBS-DR-lpr" secondAttribute="leading" priority="999" id="RJH-Dl-RrX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pW4-PT-J14" secondAttribute="bottom" constant="20" id="RtF-tg-o9Q"/>
                             <constraint firstItem="pW4-PT-J14" firstAttribute="top" secondItem="JBS-DR-lpr" secondAttribute="bottom" constant="20" id="VAF-tc-sDR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JBS-DR-lpr" secondAttribute="trailing" constant="24" id="XLp-yR-vsc"/>
                             <constraint firstItem="JBS-DR-lpr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="n49-Pm-qaW"/>
-                            <constraint firstItem="pW4-PT-J14" firstAttribute="trailing" secondItem="JBS-DR-lpr" secondAttribute="trailing" id="pqe-KO-ui9"/>
+                            <constraint firstItem="pW4-PT-J14" firstAttribute="trailing" secondItem="JBS-DR-lpr" secondAttribute="trailing" priority="999" id="pqe-KO-ui9"/>
                             <constraint firstItem="JBS-DR-lpr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zoz-gf-8F6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -110,7 +119,7 @@
     </scenes>
     <resources>
         <namedColor name="brand">
-            <color red="0.0" green="0.68599998950958252" blue="0.14699999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.68627450980392157" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="header">
             <color white="0.59700000286102295" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -21,6 +21,9 @@
 		C35CDDAB23B93EB2009F8A7F /* StopwatchFormattingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDAA23B93EB2009F8A7F /* StopwatchFormattingLabel.swift */; };
 		C35CDDAF23B93F97009F8A7F /* CurrencyFormattingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDAE23B93F97009F8A7F /* CurrencyFormattingLabel.swift */; };
 		C35CDDB123B93FB1009F8A7F /* DoubleFormattingLabelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDB023B93FB1009F8A7F /* DoubleFormattingLabelBase.swift */; };
+		C35CDDB423B98263009F8A7F /* UIFont+RoundedMonospacedSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDB323B98263009F8A7F /* UIFont+RoundedMonospacedSystem.swift */; };
+		C35CDDB723B98456009F8A7F /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDB623B98456009F8A7F /* RoundedButton.swift */; };
+		C35CDDB923B988F7009F8A7F /* ProminentRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDB823B988F7009F8A7F /* ProminentRoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		C35CDDAA23B93EB2009F8A7F /* StopwatchFormattingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchFormattingLabel.swift; sourceTree = "<group>"; };
 		C35CDDAE23B93F97009F8A7F /* CurrencyFormattingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormattingLabel.swift; sourceTree = "<group>"; };
 		C35CDDB023B93FB1009F8A7F /* DoubleFormattingLabelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleFormattingLabelBase.swift; sourceTree = "<group>"; };
+		C35CDDB323B98263009F8A7F /* UIFont+RoundedMonospacedSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+RoundedMonospacedSystem.swift"; sourceTree = "<group>"; };
+		C35CDDB623B98456009F8A7F /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		C35CDDB823B988F7009F8A7F /* ProminentRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProminentRoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 		C35CDDA723B93D9A009F8A7F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C35CDDB323B98263009F8A7F /* UIFont+RoundedMonospacedSystem.swift */,
 				C35CDDA123B9391F009F8A7F /* Double+StopwatchFormatting.swift */,
 				C35CDDA323B93C96009F8A7F /* UserDefaultPropertyWrapper.swift */,
 				C35CDD9F23B9351A009F8A7F /* UIViewController+ShorthandAlerts.swift */,
@@ -107,9 +114,9 @@
 		C35CDDAD23B93F8A009F8A7F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C35CDDB023B93FB1009F8A7F /* DoubleFormattingLabelBase.swift */,
-				C35CDDAA23B93EB2009F8A7F /* StopwatchFormattingLabel.swift */,
-				C35CDDAE23B93F97009F8A7F /* CurrencyFormattingLabel.swift */,
+				C35CDDB623B98456009F8A7F /* RoundedButton.swift */,
+				C35CDDB823B988F7009F8A7F /* ProminentRoundedButton.swift */,
+				C35CDDB523B98444009F8A7F /* Labels */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,6 +128,16 @@
 				C35CDDA523B93D10009F8A7F /* Settings.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C35CDDB523B98444009F8A7F /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				C35CDDB023B93FB1009F8A7F /* DoubleFormattingLabelBase.swift */,
+				C35CDDAA23B93EB2009F8A7F /* StopwatchFormattingLabel.swift */,
+				C35CDDAE23B93F97009F8A7F /* CurrencyFormattingLabel.swift */,
+			);
+			path = Labels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,12 +215,15 @@
 				C35CDDA023B9351A009F8A7F /* UIViewController+ShorthandAlerts.swift in Sources */,
 				C35CDDA623B93D10009F8A7F /* Settings.swift in Sources */,
 				C35CDDA423B93C96009F8A7F /* UserDefaultPropertyWrapper.swift in Sources */,
+				C35CDDB923B988F7009F8A7F /* ProminentRoundedButton.swift in Sources */,
 				C35CDDAF23B93F97009F8A7F /* CurrencyFormattingLabel.swift in Sources */,
 				C35CDDA223B9391F009F8A7F /* Double+StopwatchFormatting.swift in Sources */,
 				C35CDD8A23B926CA009F8A7F /* AppDelegate.swift in Sources */,
 				C35CDD8C23B926CA009F8A7F /* SceneDelegate.swift in Sources */,
 				C35CDDAB23B93EB2009F8A7F /* StopwatchFormattingLabel.swift in Sources */,
+				C35CDDB723B98456009F8A7F /* RoundedButton.swift in Sources */,
 				C35CDDB123B93FB1009F8A7F /* DoubleFormattingLabelBase.swift in Sources */,
+				C35CDDB423B98263009F8A7F /* UIFont+RoundedMonospacedSystem.swift in Sources */,
 				C35CDD9E23B92A52009F8A7F /* Stopwatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +371,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RHEEZ26ZWB;
 				INFOPLIST_FILE = Dolalr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,6 +390,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RHEEZ26ZWB;
 				INFOPLIST_FILE = Dolalr/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

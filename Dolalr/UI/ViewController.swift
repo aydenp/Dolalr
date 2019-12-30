@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Use monospaced fonts for our digit labels since they change so much (wish I could do this in nib)
-        stopwatchLabel.font = .monospacedDigitSystemFont(ofSize: 62, weight: .semibold)
-        dollarLabel.font = .monospacedDigitSystemFont(ofSize: 32, weight: .semibold)
+        stopwatchLabel.font = .roundedMonospacedDigitSystemFont(ofSize: 62, weight: .semibold)
+        dollarLabel.font = .roundedMonospacedDigitSystemFont(ofSize: 32, weight: .semibold)
         
         // Setup UI
         updateUIState()
