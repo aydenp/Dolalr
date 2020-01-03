@@ -12,8 +12,11 @@ extension UIFont {
     static func roundedMonospacedDigitSystemFont(ofSize size: CGFloat, weight: UIFont.Weight = .regular) -> UIFont? {
         let font = UIFont.monospacedDigitSystemFont(ofSize: size, weight: weight)
         
-        guard let roundedDescriptor = font.fontDescriptor.withDesign(.rounded) else { return font }
-        return UIFont(descriptor: roundedDescriptor, size: 0)
+        if #available(iOS 13.0, *), let roundedDescriptor = font.fontDescriptor.withDesign(.rounded) {
+            return UIFont(descriptor: roundedDescriptor, size: 0)
+        }
+        
+        return font
     }
     
 }

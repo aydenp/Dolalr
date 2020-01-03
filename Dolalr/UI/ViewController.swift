@@ -91,3 +91,45 @@ class ViewController: UIViewController {
     }
 
 }
+
+// MARK: - Screenshot State keys for Simulator
+#if targetEnvironment(simulator)
+extension ViewController {
+    override var keyCommands: [UIKeyCommand]? {
+        return [
+            UIKeyCommand(input: "1", modifierFlags: [], action: #selector(test_1)),
+            UIKeyCommand(input: "2", modifierFlags: [], action: #selector(test_2)),
+            UIKeyCommand(input: "3", modifierFlags: [], action: #selector(test_3))
+        ]
+    }
+    
+    @objc func test_1() {
+        Settings.hourlyRate = 120
+        Stopwatch.shared.reset()
+        Stopwatch.shared.start(at: (58 * 60) + 32.42)
+        
+        updateUIState()
+        displayLink?.invalidate()
+        
+        if #available(iOS 13.0, *) {
+            view.window?.overrideUserInterfaceStyle = .light
+        }
+    }
+    
+    @objc func test_2() {
+        Stopwatch.shared.reset()
+        updateUIState()
+    }
+    
+    @objc func test_3() {
+        Settings.hourlyRate = 120
+        Stopwatch.shared.reset()
+        Stopwatch.shared.start(at: (2 * 60 * 60) + (19 * 60) + 24.45)
+        Stopwatch.shared.togglePause()
+        updateUIState()
+        if #available(iOS 13.0, *) {
+            view.window?.overrideUserInterfaceStyle = .dark
+        }
+    }
+}
+#endif

@@ -54,9 +54,9 @@ class Stopwatch {
     
     // MARK: - Control Methods
     
-    func start() {
+    func start(at duration: CFTimeInterval = 0) {
         guard state != .running else { return }
-        startTime = CACurrentMediaTime()
+        startTime = CACurrentMediaTime() - duration
     }
     
     func reset() {
