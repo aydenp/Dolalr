@@ -9,25 +9,30 @@
 import Foundation
 
 @propertyWrapper
-struct UserDefault<T> {
+struct UbiquitousStore<T> {
     let key: String
     let defaultValue: T
+    let fallbackToUserDefaults: Bool
 
-    init(_ key: String, defaultValue: T) {
+    init(_ key: String, defaultValue: T, fallbackToUserDefaults: Bool = false) {
         self.key = key
         self.defaultValue = defaultValue
+        self.fallbackToUserDefaults = fallbackToUserDefaults
     }
 
     var wrappedValue: T {
         get {
-            return UserDefaults.standard.object(forKey: key) as? T ?? defaultValue
+            return NSUbiquitousKeyValueStore.default.object(forKey: key) as? T ??
+                    (fallbackToUserDefaults ? UserDefaults.standard.object(forKey: key) as? T : nil) ??
+                    defaultValue
         }
         set {
             if let value = newValue as? OptionalProtocol, value.isNil() {
-                UserDefaults.standard.removeObject(forKey: key)
+                NSUbiquitousKeyValueStore.default.removeObject(forKey: key)
             } else {
-                UserDefaults.standard.set(newValue, forKey: key)
+                NSUbiquitousKeyValueStore.default.set(newValue, forKey: key)
             }
+            NSUbiquitousKeyValueStore.default.synchronize()
         }
     }
 }

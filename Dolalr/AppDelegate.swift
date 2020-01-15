@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
-
+    
     // MARK: UISceneSession Lifecycle
 
     @available(iOS 13.0, *)
@@ -32,6 +32,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
 }
+    
+#if targetEnvironment(macCatalyst)
+// MARK: - Menu Bar
 
+extension AppDelegate {
+    override func buildMenu(with builder: UIMenuBuilder) {
+        builder.insertChild(UIMenu(title: "Stopwatch", image: nil, identifier: nil, options: .displayInline, children: [
+            UIKeyCommand(title: "Start/Stop", action: #selector(toggleRunning), input: " "),
+            UIKeyCommand(title: "Reset", action: #selector(resetTimer), input: "R", modifierFlags: .command)
+        ]), atStartOfMenu: .file)
+        
+        builder.remove(menu: .edit)
+        builder.remove(menu: .format)
+        builder.remove(menu: .view)
+    }
+
+    @objc func toggleRunning() {
+        if Stopwatch.shared.state == .stopped { // Start button
+            Stopwatch.shared.start()
+        } else { // Resume/Pause button
+            Stopwatch.shared.togglePause()
+        }
+    }
+    
+    @objc func resetTimer() {
+        Stopwatch.shared.reset()
+    }
+}
+#endif

@@ -9,6 +9,6 @@
 import Foundation
 
 struct Settings {
-    @UserDefault("hourlyRate", defaultValue: 0)
+    @UbiquitousStore("hourlyRate", defaultValue: 0)
     static var hourlyRate: Double
 }

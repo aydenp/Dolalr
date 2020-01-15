@@ -28,7 +28,7 @@ class RoundedButton: UIButton {
     
     func setupColours() {
         setTitleColor(tintColor, for: .normal)
-        backgroundColor = tintColor.withAlphaComponent(0.1)
+        backgroundColor = tintColor.withAlphaComponent(0.15)
     }
     
     override var isHighlighted: Bool {

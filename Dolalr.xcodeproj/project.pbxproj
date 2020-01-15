@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C32D465F23CFC9AE008EDF50 /* GetTimeIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D465E23CFC9AE008EDF50 /* GetTimeIntentHandler.swift */; };
+		C32D466123CFC9C5008EDF50 /* SetRateIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D466023CFC9C5008EDF50 /* SetRateIntentHandler.swift */; };
+		C32D466323CFC9D6008EDF50 /* SetStateIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D466223CFC9D6008EDF50 /* SetStateIntentHandler.swift */; };
+		C32D466523CFCA07008EDF50 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D465C23CFC9A1008EDF50 /* State.swift */; };
 		C35CDD8A23B926CA009F8A7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDD8923B926CA009F8A7F /* AppDelegate.swift */; };
 		C35CDD8C23B926CA009F8A7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDD8B23B926CA009F8A7F /* SceneDelegate.swift */; };
 		C35CDD8E23B926CA009F8A7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDD8D23B926CA009F8A7F /* ViewController.swift */; };
@@ -16,36 +20,93 @@
 		C35CDD9E23B92A52009F8A7F /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDD9D23B92A52009F8A7F /* Stopwatch.swift */; };
 		C35CDDA023B9351A009F8A7F /* UIViewController+ShorthandAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDD9F23B9351A009F8A7F /* UIViewController+ShorthandAlerts.swift */; };
 		C35CDDA223B9391F009F8A7F /* Double+StopwatchFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDA123B9391F009F8A7F /* Double+StopwatchFormatting.swift */; };
-		C35CDDA423B93C96009F8A7F /* UserDefaultPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDA323B93C96009F8A7F /* UserDefaultPropertyWrapper.swift */; };
+		C35CDDA423B93C96009F8A7F /* UbiquitousStorePropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDA323B93C96009F8A7F /* UbiquitousStorePropertyWrapper.swift */; };
 		C35CDDA623B93D10009F8A7F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDA523B93D10009F8A7F /* Settings.swift */; };
-		C35CDDAB23B93EB2009F8A7F /* StopwatchFormattingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDAA23B93EB2009F8A7F /* StopwatchFormattingLabel.swift */; };
-		C35CDDAF23B93F97009F8A7F /* CurrencyFormattingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDAE23B93F97009F8A7F /* CurrencyFormattingLabel.swift */; };
-		C35CDDB123B93FB1009F8A7F /* DoubleFormattingLabelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDB023B93FB1009F8A7F /* DoubleFormattingLabelBase.swift */; };
 		C35CDDB423B98263009F8A7F /* UIFont+RoundedMonospacedSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDB323B98263009F8A7F /* UIFont+RoundedMonospacedSystem.swift */; };
 		C35CDDB723B98456009F8A7F /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDB623B98456009F8A7F /* RoundedButton.swift */; };
 		C35CDDB923B988F7009F8A7F /* ProminentRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDB823B988F7009F8A7F /* ProminentRoundedButton.swift */; };
+		C36CAF1323C6FA8B0083BD81 /* StopwatchUIStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CAF1223C6FA8B0083BD81 /* StopwatchUIStateManager.swift */; };
+		C36CAF1523C7B6C10083BD81 /* ViewController+TouchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CAF1423C7B6C10083BD81 /* ViewController+TouchBar.swift */; };
+		C36CAF1723C7B6FA0083BD81 /* ViewController+SimulatorScreenshotRigging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CAF1623C7B6FA0083BD81 /* ViewController+SimulatorScreenshotRigging.swift */; };
+		C36CAF1C23C7CFD50083BD81 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C36CAF1E23C7CFD50083BD81 /* InfoPlist.strings */; };
+		C3AAAD1A23C7E23300D4A74E /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AAAD1923C7E23300D4A74E /* IntentHandler.swift */; };
+		C3AAAD3023C7E23300D4A74E /* Dolalr Intents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C3AAAD1723C7E23300D4A74E /* Dolalr Intents.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C3AAAD3923C7E26700D4A74E /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C3AAAD3823C7E26700D4A74E /* Intents.intentdefinition */; };
+		C3AAAD3A23C7E56000D4A74E /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C3AAAD3823C7E26700D4A74E /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		C3AAAD3B23C7E6E600D4A74E /* UbiquitousStorePropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDA323B93C96009F8A7F /* UbiquitousStorePropertyWrapper.swift */; };
+		C3AAAD3C23C7E6E600D4A74E /* Double+StopwatchFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDA123B9391F009F8A7F /* Double+StopwatchFormatting.swift */; };
+		C3AAAD3D23C7E6E900D4A74E /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDD9D23B92A52009F8A7F /* Stopwatch.swift */; };
+		C3AAAD3E23C7E6E900D4A74E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDA523B93D10009F8A7F /* Settings.swift */; };
+		C3AAAD3F23C7E6E900D4A74E /* StopwatchUIStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CAF1223C6FA8B0083BD81 /* StopwatchUIStateManager.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C3AAAD2E23C7E23300D4A74E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C35CDD7E23B926CA009F8A7F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3AAAD1623C7E23300D4A74E;
+			remoteInfo = "Dolalr Intents";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C36CAF3F23C7DEA40083BD81 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3AAAD3723C7E23300D4A74E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C3AAAD3023C7E23300D4A74E /* Dolalr Intents.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C31B52BC23C40E780009CA83 /* Dolalr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dolalr.entitlements; sourceTree = "<group>"; };
+		C32D465C23CFC9A1008EDF50 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		C32D465E23CFC9AE008EDF50 /* GetTimeIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTimeIntentHandler.swift; sourceTree = "<group>"; };
+		C32D466023CFC9C5008EDF50 /* SetRateIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRateIntentHandler.swift; sourceTree = "<group>"; };
+		C32D466223CFC9D6008EDF50 /* SetStateIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetStateIntentHandler.swift; sourceTree = "<group>"; };
 		C35CDD8623B926CA009F8A7F /* Dolalr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dolalr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35CDD8923B926CA009F8A7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C35CDD8B23B926CA009F8A7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C35CDD8D23B926CA009F8A7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C35CDD9023B926CA009F8A7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C35CDD9223B926CC009F8A7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C35CDD9523B926CC009F8A7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C35CDD9723B926CC009F8A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C35CDD9D23B92A52009F8A7F /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		C35CDD9F23B9351A009F8A7F /* UIViewController+ShorthandAlerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShorthandAlerts.swift"; sourceTree = "<group>"; };
 		C35CDDA123B9391F009F8A7F /* Double+StopwatchFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+StopwatchFormatting.swift"; sourceTree = "<group>"; };
-		C35CDDA323B93C96009F8A7F /* UserDefaultPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultPropertyWrapper.swift; sourceTree = "<group>"; };
+		C35CDDA323B93C96009F8A7F /* UbiquitousStorePropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UbiquitousStorePropertyWrapper.swift; sourceTree = "<group>"; };
 		C35CDDA523B93D10009F8A7F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		C35CDDAA23B93EB2009F8A7F /* StopwatchFormattingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchFormattingLabel.swift; sourceTree = "<group>"; };
-		C35CDDAE23B93F97009F8A7F /* CurrencyFormattingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormattingLabel.swift; sourceTree = "<group>"; };
-		C35CDDB023B93FB1009F8A7F /* DoubleFormattingLabelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleFormattingLabelBase.swift; sourceTree = "<group>"; };
 		C35CDDB323B98263009F8A7F /* UIFont+RoundedMonospacedSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+RoundedMonospacedSystem.swift"; sourceTree = "<group>"; };
 		C35CDDB623B98456009F8A7F /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		C35CDDB823B988F7009F8A7F /* ProminentRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProminentRoundedButton.swift; sourceTree = "<group>"; };
+		C36CAF1223C6FA8B0083BD81 /* StopwatchUIStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchUIStateManager.swift; sourceTree = "<group>"; };
+		C36CAF1423C7B6C10083BD81 /* ViewController+TouchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TouchBar.swift"; sourceTree = "<group>"; };
+		C36CAF1623C7B6FA0083BD81 /* ViewController+SimulatorScreenshotRigging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+SimulatorScreenshotRigging.swift"; sourceTree = "<group>"; };
+		C36CAF1D23C7CFD50083BD81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C36CAF1F23C7CFD70083BD81 /* en-AU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-AU"; path = "en-AU.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		C36CAF2023C7CFD80083BD81 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		C36CAF2123C7D00A0083BD81 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C3AAAD1723C7E23300D4A74E /* Dolalr Intents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Dolalr Intents.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3AAAD1923C7E23300D4A74E /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		C3AAAD1B23C7E23300D4A74E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3AAAD3823C7E26700D4A74E /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		C3AAAD4023C7E89900D4A74E /* Dolalr Intents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Dolalr Intents.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +117,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C3AAAD1423C7E23300D4A74E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C32D466423CFC9E2008EDF50 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				C32D466223CFC9D6008EDF50 /* SetStateIntentHandler.swift */,
+				C32D466023CFC9C5008EDF50 /* SetRateIntentHandler.swift */,
+				C32D465E23CFC9AE008EDF50 /* GetTimeIntentHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
 		C35CDD7D23B926CA009F8A7F = {
 			isa = PBXGroup;
 			children = (
+				C3AAAD0C23C7E01600D4A74E /* Shared */,
 				C35CDD8823B926CA009F8A7F /* Dolalr */,
+				C3AAAD1823C7E23300D4A74E /* Dolalr Intents */,
+				C3AAAD2123C7E23300D4A74E /* Frameworks */,
 				C35CDD8723B926CA009F8A7F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				C35CDD8623B926CA009F8A7F /* Dolalr.app */,
+				C3AAAD1723C7E23300D4A74E /* Dolalr Intents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,15 +160,16 @@
 		C35CDD8823B926CA009F8A7F /* Dolalr */ = {
 			isa = PBXGroup;
 			children = (
+				C31B52BC23C40E780009CA83 /* Dolalr.entitlements */,
 				C35CDD8923B926CA009F8A7F /* AppDelegate.swift */,
 				C35CDD8B23B926CA009F8A7F /* SceneDelegate.swift */,
 				C35CDDAC23B93F87009F8A7F /* UI */,
-				C35CDDB223B9405D009F8A7F /* Model */,
 				C35CDDA723B93D9A009F8A7F /* Extensions */,
 				C35CDD8F23B926CA009F8A7F /* Main.storyboard */,
 				C35CDD9223B926CC009F8A7F /* Assets.xcassets */,
 				C35CDD9423B926CC009F8A7F /* LaunchScreen.storyboard */,
 				C35CDD9723B926CC009F8A7F /* Info.plist */,
+				C36CAF1E23C7CFD50083BD81 /* InfoPlist.strings */,
 			);
 			path = Dolalr;
 			sourceTree = "<group>";
@@ -95,8 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				C35CDDB323B98263009F8A7F /* UIFont+RoundedMonospacedSystem.swift */,
-				C35CDDA123B9391F009F8A7F /* Double+StopwatchFormatting.swift */,
-				C35CDDA323B93C96009F8A7F /* UserDefaultPropertyWrapper.swift */,
 				C35CDD9F23B9351A009F8A7F /* UIViewController+ShorthandAlerts.swift */,
 			);
 			path = Extensions;
@@ -106,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				C35CDD8D23B926CA009F8A7F /* ViewController.swift */,
+				C36CAF1423C7B6C10083BD81 /* ViewController+TouchBar.swift */,
+				C36CAF1623C7B6FA0083BD81 /* ViewController+SimulatorScreenshotRigging.swift */,
 				C35CDDAD23B93F8A009F8A7F /* Views */,
 			);
 			path = UI;
@@ -116,7 +199,6 @@
 			children = (
 				C35CDDB623B98456009F8A7F /* RoundedButton.swift */,
 				C35CDDB823B988F7009F8A7F /* ProminentRoundedButton.swift */,
-				C35CDDB523B98444009F8A7F /* Labels */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,18 +208,47 @@
 			children = (
 				C35CDD9D23B92A52009F8A7F /* Stopwatch.swift */,
 				C35CDDA523B93D10009F8A7F /* Settings.swift */,
+				C36CAF1223C6FA8B0083BD81 /* StopwatchUIStateManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		C35CDDB523B98444009F8A7F /* Labels */ = {
+		C3AAAD0C23C7E01600D4A74E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				C35CDDB023B93FB1009F8A7F /* DoubleFormattingLabelBase.swift */,
-				C35CDDAA23B93EB2009F8A7F /* StopwatchFormattingLabel.swift */,
-				C35CDDAE23B93F97009F8A7F /* CurrencyFormattingLabel.swift */,
+				C35CDDB223B9405D009F8A7F /* Model */,
+				C3AAAD0D23C7E02A00D4A74E /* Extensions */,
 			);
-			path = Labels;
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C3AAAD0D23C7E02A00D4A74E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C35CDDA323B93C96009F8A7F /* UbiquitousStorePropertyWrapper.swift */,
+				C35CDDA123B9391F009F8A7F /* Double+StopwatchFormatting.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C3AAAD1823C7E23300D4A74E /* Dolalr Intents */ = {
+			isa = PBXGroup;
+			children = (
+				C3AAAD4023C7E89900D4A74E /* Dolalr Intents.entitlements */,
+				C3AAAD3823C7E26700D4A74E /* Intents.intentdefinition */,
+				C3AAAD1923C7E23300D4A74E /* IntentHandler.swift */,
+				C32D466423CFC9E2008EDF50 /* Handlers */,
+				C32D465C23CFC9A1008EDF50 /* State.swift */,
+				C3AAAD1B23C7E23300D4A74E /* Info.plist */,
+			);
+			path = "Dolalr Intents";
+			sourceTree = "<group>";
+		};
+		C3AAAD2123C7E23300D4A74E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,15 +261,35 @@
 				C35CDD8223B926CA009F8A7F /* Sources */,
 				C35CDD8323B926CA009F8A7F /* Frameworks */,
 				C35CDD8423B926CA009F8A7F /* Resources */,
+				C36CAF3F23C7DEA40083BD81 /* Embed Watch Content */,
+				C3AAAD3723C7E23300D4A74E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C3AAAD2F23C7E23300D4A74E /* PBXTargetDependency */,
 			);
 			name = Dolalr;
 			productName = Dolalr;
 			productReference = C35CDD8623B926CA009F8A7F /* Dolalr.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C3AAAD1623C7E23300D4A74E /* Dolalr Intents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3AAAD3423C7E23300D4A74E /* Build configuration list for PBXNativeTarget "Dolalr Intents" */;
+			buildPhases = (
+				C3AAAD1323C7E23300D4A74E /* Sources */,
+				C3AAAD1423C7E23300D4A74E /* Frameworks */,
+				C3AAAD1523C7E23300D4A74E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dolalr Intents";
+			productName = "Dolalr Intents";
+			productReference = C3AAAD1723C7E23300D4A74E /* Dolalr Intents.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -166,12 +297,15 @@
 		C35CDD7E23B926CA009F8A7F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Ayden Panhuyzen";
 				TargetAttributes = {
 					C35CDD8523B926CA009F8A7F = {
 						CreatedOnToolsVersion = 11.2.1;
+					};
+					C3AAAD1623C7E23300D4A74E = {
+						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
@@ -182,6 +316,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"en-GB",
+				"en-AU",
 			);
 			mainGroup = C35CDD7D23B926CA009F8A7F;
 			productRefGroup = C35CDD8723B926CA009F8A7F /* Products */;
@@ -189,6 +325,7 @@
 			projectRoot = "";
 			targets = (
 				C35CDD8523B926CA009F8A7F /* Dolalr */,
+				C3AAAD1623C7E23300D4A74E /* Dolalr Intents */,
 			);
 		};
 /* End PBXProject section */
@@ -199,8 +336,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C35CDD9623B926CC009F8A7F /* LaunchScreen.storyboard in Resources */,
+				C36CAF1C23C7CFD50083BD81 /* InfoPlist.strings in Resources */,
 				C35CDD9323B926CC009F8A7F /* Assets.xcassets in Resources */,
 				C35CDD9123B926CA009F8A7F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3AAAD1523C7E23300D4A74E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,27 +359,55 @@
 				C35CDD8E23B926CA009F8A7F /* ViewController.swift in Sources */,
 				C35CDDA023B9351A009F8A7F /* UIViewController+ShorthandAlerts.swift in Sources */,
 				C35CDDA623B93D10009F8A7F /* Settings.swift in Sources */,
-				C35CDDA423B93C96009F8A7F /* UserDefaultPropertyWrapper.swift in Sources */,
+				C35CDDA423B93C96009F8A7F /* UbiquitousStorePropertyWrapper.swift in Sources */,
 				C35CDDB923B988F7009F8A7F /* ProminentRoundedButton.swift in Sources */,
-				C35CDDAF23B93F97009F8A7F /* CurrencyFormattingLabel.swift in Sources */,
+				C36CAF1723C7B6FA0083BD81 /* ViewController+SimulatorScreenshotRigging.swift in Sources */,
 				C35CDDA223B9391F009F8A7F /* Double+StopwatchFormatting.swift in Sources */,
 				C35CDD8A23B926CA009F8A7F /* AppDelegate.swift in Sources */,
 				C35CDD8C23B926CA009F8A7F /* SceneDelegate.swift in Sources */,
-				C35CDDAB23B93EB2009F8A7F /* StopwatchFormattingLabel.swift in Sources */,
+				C36CAF1523C7B6C10083BD81 /* ViewController+TouchBar.swift in Sources */,
+				C3AAAD3A23C7E56000D4A74E /* Intents.intentdefinition in Sources */,
 				C35CDDB723B98456009F8A7F /* RoundedButton.swift in Sources */,
-				C35CDDB123B93FB1009F8A7F /* DoubleFormattingLabelBase.swift in Sources */,
 				C35CDDB423B98263009F8A7F /* UIFont+RoundedMonospacedSystem.swift in Sources */,
 				C35CDD9E23B92A52009F8A7F /* Stopwatch.swift in Sources */,
+				C36CAF1323C6FA8B0083BD81 /* StopwatchUIStateManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3AAAD1323C7E23300D4A74E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3AAAD3E23C7E6E900D4A74E /* Settings.swift in Sources */,
+				C32D466123CFC9C5008EDF50 /* SetRateIntentHandler.swift in Sources */,
+				C3AAAD3923C7E26700D4A74E /* Intents.intentdefinition in Sources */,
+				C32D466523CFCA07008EDF50 /* State.swift in Sources */,
+				C32D465F23CFC9AE008EDF50 /* GetTimeIntentHandler.swift in Sources */,
+				C3AAAD3B23C7E6E600D4A74E /* UbiquitousStorePropertyWrapper.swift in Sources */,
+				C3AAAD3D23C7E6E900D4A74E /* Stopwatch.swift in Sources */,
+				C3AAAD3C23C7E6E600D4A74E /* Double+StopwatchFormatting.swift in Sources */,
+				C3AAAD3F23C7E6E900D4A74E /* StopwatchUIStateManager.swift in Sources */,
+				C32D466323CFC9D6008EDF50 /* SetStateIntentHandler.swift in Sources */,
+				C3AAAD1A23C7E23300D4A74E /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C3AAAD2F23C7E23300D4A74E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = C3AAAD1623C7E23300D4A74E /* Dolalr Intents */;
+			targetProxy = C3AAAD2E23C7E23300D4A74E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		C35CDD8F23B926CA009F8A7F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C35CDD9023B926CA009F8A7F /* Base */,
+				C36CAF2123C7D00A0083BD81 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -247,6 +420,16 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		C36CAF1E23C7CFD50083BD81 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C36CAF1D23C7CFD50083BD81 /* en */,
+				C36CAF1F23C7CFD70083BD81 /* en-AU */,
+				C36CAF2023C7CFD80083BD81 /* en-GB */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -254,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -314,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -367,8 +552,11 @@
 		C35CDD9B23B926CC009F8A7F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Dolalr/Dolalr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = RHEEZ26ZWB;
 				INFOPLIST_FILE = Dolalr/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -376,8 +564,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.ayden.ios.Dolalr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -386,8 +576,11 @@
 		C35CDD9C23B926CC009F8A7F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Dolalr/Dolalr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = RHEEZ26ZWB;
 				INFOPLIST_FILE = Dolalr/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -395,8 +588,50 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.ayden.ios.Dolalr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C3AAAD3523C7E23300D4A74E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Dolalr Intents/Dolalr Intents.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RHEEZ26ZWB;
+				INFOPLIST_FILE = "Dolalr Intents/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.ayden.ios.Dolalr.Dolalr-Intents";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C3AAAD3623C7E23300D4A74E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Dolalr Intents/Dolalr Intents.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RHEEZ26ZWB;
+				INFOPLIST_FILE = "Dolalr Intents/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.ayden.ios.Dolalr.Dolalr-Intents";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -419,6 +654,15 @@
 			buildConfigurations = (
 				C35CDD9B23B926CC009F8A7F /* Debug */,
 				C35CDD9C23B926CC009F8A7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3AAAD3423C7E23300D4A74E /* Build configuration list for PBXNativeTarget "Dolalr Intents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3AAAD3523C7E23300D4A74E /* Debug */,
+				C3AAAD3623C7E23300D4A74E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
