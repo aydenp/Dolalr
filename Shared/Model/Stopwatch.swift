@@ -14,7 +14,10 @@ class Stopwatch {
     
     private init() {
         // Migrate start time from user defaults and use of CACurrentMediaTime
-        startTime = UserDefaults.standard.double(forKey: "startTime") + (CFAbsoluteTimeGetCurrent() - CACurrentMediaTime())
+        if let oldStartTime = UserDefaults.standard.object(forKey: "startTime") as? Double {
+            startTime = oldStartTime + CFAbsoluteTimeGetCurrent() - CACurrentMediaTime()
+            UserDefaults.standard.removeObject(forKey: "startTime")
+        }
         
         NotificationCenter.default.addObserver(self, selector: #selector(notifyStateObservers), name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: NSUbiquitousKeyValueStore.default)
     }

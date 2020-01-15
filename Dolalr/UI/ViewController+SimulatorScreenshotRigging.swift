@@ -9,6 +9,7 @@
 import UIKit
 
 // MARK: - Screenshot State keys for Simulator
+
 #if targetEnvironment(simulator)
 extension ViewController {
     override var keyCommands: [UIKeyCommand]? {

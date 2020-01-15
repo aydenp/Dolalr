@@ -556,6 +556,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Dolalr/Dolalr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = RHEEZ26ZWB;
 				INFOPLIST_FILE = Dolalr/Info.plist;
@@ -580,6 +581,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Dolalr/Dolalr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = RHEEZ26ZWB;
 				INFOPLIST_FILE = Dolalr/Info.plist;
@@ -602,6 +604,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Dolalr Intents/Dolalr Intents.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = RHEEZ26ZWB;
 				INFOPLIST_FILE = "Dolalr Intents/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -609,6 +612,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.ayden.ios.Dolalr.Dolalr-Intents";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -622,6 +626,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Dolalr Intents/Dolalr Intents.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = RHEEZ26ZWB;
 				INFOPLIST_FILE = "Dolalr Intents/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -629,6 +634,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.ayden.ios.Dolalr.Dolalr-Intents";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
