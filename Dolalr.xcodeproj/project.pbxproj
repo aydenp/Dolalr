@@ -28,7 +28,6 @@
 		C36CAF1323C6FA8B0083BD81 /* StopwatchUIStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CAF1223C6FA8B0083BD81 /* StopwatchUIStateManager.swift */; };
 		C36CAF1523C7B6C10083BD81 /* ViewController+TouchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CAF1423C7B6C10083BD81 /* ViewController+TouchBar.swift */; };
 		C36CAF1723C7B6FA0083BD81 /* ViewController+SimulatorScreenshotRigging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CAF1623C7B6FA0083BD81 /* ViewController+SimulatorScreenshotRigging.swift */; };
-		C36CAF1C23C7CFD50083BD81 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C36CAF1E23C7CFD50083BD81 /* InfoPlist.strings */; };
 		C3AAAD1A23C7E23300D4A74E /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AAAD1923C7E23300D4A74E /* IntentHandler.swift */; };
 		C3AAAD3023C7E23300D4A74E /* Dolalr Intents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C3AAAD1723C7E23300D4A74E /* Dolalr Intents.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C3AAAD3923C7E26700D4A74E /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C3AAAD3823C7E26700D4A74E /* Intents.intentdefinition */; };
@@ -98,9 +97,6 @@
 		C36CAF1223C6FA8B0083BD81 /* StopwatchUIStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchUIStateManager.swift; sourceTree = "<group>"; };
 		C36CAF1423C7B6C10083BD81 /* ViewController+TouchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TouchBar.swift"; sourceTree = "<group>"; };
 		C36CAF1623C7B6FA0083BD81 /* ViewController+SimulatorScreenshotRigging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+SimulatorScreenshotRigging.swift"; sourceTree = "<group>"; };
-		C36CAF1D23C7CFD50083BD81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C36CAF1F23C7CFD70083BD81 /* en-AU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-AU"; path = "en-AU.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		C36CAF2023C7CFD80083BD81 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		C36CAF2123C7D00A0083BD81 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3AAAD1723C7E23300D4A74E /* Dolalr Intents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Dolalr Intents.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AAAD1923C7E23300D4A74E /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -169,7 +165,6 @@
 				C35CDD9223B926CC009F8A7F /* Assets.xcassets */,
 				C35CDD9423B926CC009F8A7F /* LaunchScreen.storyboard */,
 				C35CDD9723B926CC009F8A7F /* Info.plist */,
-				C36CAF1E23C7CFD50083BD81 /* InfoPlist.strings */,
 			);
 			path = Dolalr;
 			sourceTree = "<group>";
@@ -316,8 +311,6 @@
 			knownRegions = (
 				en,
 				Base,
-				"en-GB",
-				"en-AU",
 			);
 			mainGroup = C35CDD7D23B926CA009F8A7F;
 			productRefGroup = C35CDD8723B926CA009F8A7F /* Products */;
@@ -336,7 +329,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C35CDD9623B926CC009F8A7F /* LaunchScreen.storyboard in Resources */,
-				C36CAF1C23C7CFD50083BD81 /* InfoPlist.strings in Resources */,
 				C35CDD9323B926CC009F8A7F /* Assets.xcassets in Resources */,
 				C35CDD9123B926CA009F8A7F /* Main.storyboard in Resources */,
 			);
@@ -420,16 +412,6 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		C36CAF1E23C7CFD50083BD81 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C36CAF1D23C7CFD50083BD81 /* en */,
-				C36CAF1F23C7CFD70083BD81 /* en-AU */,
-				C36CAF2023C7CFD80083BD81 /* en-GB */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -484,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -539,7 +521,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -556,7 +538,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Dolalr/Dolalr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = RHEEZ26ZWB;
 				INFOPLIST_FILE = Dolalr/Info.plist;
@@ -581,7 +563,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Dolalr/Dolalr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = RHEEZ26ZWB;
 				INFOPLIST_FILE = Dolalr/Info.plist;
@@ -604,7 +586,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Dolalr Intents/Dolalr Intents.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = RHEEZ26ZWB;
 				INFOPLIST_FILE = "Dolalr Intents/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -626,7 +608,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Dolalr Intents/Dolalr Intents.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = RHEEZ26ZWB;
 				INFOPLIST_FILE = "Dolalr Intents/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
