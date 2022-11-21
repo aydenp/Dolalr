@@ -79,11 +79,18 @@ class ViewController: UIViewController {
     
     /// Update the UI state to match that of the stopwatch
     @objc private func updateUIState() {
+        guard Thread.isMainThread else {
+            DispatchQueue.main.async {
+                self.updateUIState()
+            }
+            return
+        }
+
         // Invalidate the old display link
         displayLink?.invalidate()
-        
+
         buttonTemplates = StopwatchUIStateManager.shared.getButtonTemplates()
-        
+
         // Update stopwatch time
         tick()
         if Stopwatch.shared.state == .running {
