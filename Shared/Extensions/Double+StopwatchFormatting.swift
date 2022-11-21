@@ -15,6 +15,12 @@ extension NumberFormatter {
         return formatter
     }()
 
+    static let currencyNoMinorDigitsFormatter = { () -> NumberFormatter in
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.maximumFractionDigits = 0
+        return formatter
+    }()
 
     static let rateCurrencyFormatter = { () -> NumberFormatter in
         let formatter = NumberFormatter()

@@ -14,6 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        #if targetEnvironment(macCatalyst)
+        // Register to show badge on macOS
+        UNUserNotificationCenter.current().requestAuthorization(options: .badge) { (authorized, error) in
+            print("Authorized for badges: \(authorized), error: \(error?.localizedDescription ?? "none")")
+        }
+        #endif
         return true
     }
     

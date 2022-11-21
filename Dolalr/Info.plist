@@ -30,6 +30,8 @@
 		<string>SetRateIntent</string>
 		<string>SetStateIntent</string>
 	</array>
+	<key>NSUserNotificationsUsageDescription</key>
+	<string>Allow notifications to see your earnings live in the Dock.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

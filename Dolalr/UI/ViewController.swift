@@ -36,7 +36,18 @@ class ViewController: UIViewController {
     @objc private func tick() {
         let duration = Stopwatch.shared.duration
         stopwatchLabel.text = duration.stopwatchFormatted
-        dollarLabel.text = (duration / 60 / 60 * Settings.hourlyRate).format(using: .currencyFormatter)
+        let earnings = duration / 60 / 60 * Settings.hourlyRate
+        dollarLabel.text = earnings.format(using: .currencyFormatter)
+
+        #if targetEnvironment(macCatalyst)
+        if case .running = Stopwatch.shared.state {
+            // If > 10, don't show cents/other minor currency unit. Otherwise re-use dollar label text.
+            let badgeText = earnings >= 10 ? earnings.format(using: .currencyNoMinorDigitsFormatter) : dollarLabel.text
+            dockTile?.perform(Selector(("setBadgeLabel:")), with: badgeText)
+        } else {
+            dockTile?.perform(Selector(("setBadgeLabel:")), with: nil)
+        }
+        #endif
     }
     
     @objc func showRateAlert() {
@@ -56,6 +67,15 @@ class ViewController: UIViewController {
         
         present(alert, animated: true, completion: nil)
     }
+
+    #if targetEnvironment(macCatalyst)
+    lazy var dockTile = { () -> NSObject? in
+        // i want to vomit
+        guard let nsAppClass = NSClassFromString("NSApplication") as? NSObjectProtocol,
+            let nsApp = nsAppClass.perform(#selector(getter: UIApplication.shared))?.takeRetainedValue() as? NSObject else { return nil }
+        return nsApp.value(forKey: "dockTile") as? NSObject
+    }()
+    #endif
     
     /// Update the UI state to match that of the stopwatch
     @objc private func updateUIState() {
