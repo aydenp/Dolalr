@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,7 +29,7 @@
 		C36CAF1523C7B6C10083BD81 /* ViewController+TouchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CAF1423C7B6C10083BD81 /* ViewController+TouchBar.swift */; };
 		C36CAF1723C7B6FA0083BD81 /* ViewController+SimulatorScreenshotRigging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36CAF1623C7B6FA0083BD81 /* ViewController+SimulatorScreenshotRigging.swift */; };
 		C3AAAD1A23C7E23300D4A74E /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AAAD1923C7E23300D4A74E /* IntentHandler.swift */; };
-		C3AAAD3023C7E23300D4A74E /* Dolalr Intents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C3AAAD1723C7E23300D4A74E /* Dolalr Intents.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C3AAAD3023C7E23300D4A74E /* Dolalr Intents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C3AAAD1723C7E23300D4A74E /* Dolalr Intents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C3AAAD3923C7E26700D4A74E /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C3AAAD3823C7E26700D4A74E /* Intents.intentdefinition */; };
 		C3AAAD3A23C7E56000D4A74E /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C3AAAD3823C7E26700D4A74E /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		C3AAAD3B23C7E6E600D4A74E /* UbiquitousStorePropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35CDDA323B93C96009F8A7F /* UbiquitousStorePropertyWrapper.swift */; };
@@ -389,7 +389,6 @@
 /* Begin PBXTargetDependency section */
 		C3AAAD2F23C7E23300D4A74E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			platformFilter = ios;
 			target = C3AAAD1623C7E23300D4A74E /* Dolalr Intents */;
 			targetProxy = C3AAAD2E23C7E23300D4A74E /* PBXContainerItemProxy */;
 		};
@@ -539,7 +538,6 @@
 				CODE_SIGN_ENTITLEMENTS = Dolalr/Dolalr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = RHEEZ26ZWB;
 				INFOPLIST_FILE = Dolalr/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
@@ -550,8 +548,11 @@
 				);
 				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.ayden.ios.Dolalr;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = maccatalyst.dev.ayden.ios.Dolalr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -565,7 +566,6 @@
 				CODE_SIGN_ENTITLEMENTS = Dolalr/Dolalr.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = RHEEZ26ZWB;
 				INFOPLIST_FILE = Dolalr/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
@@ -576,8 +576,11 @@
 				);
 				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.ayden.ios.Dolalr;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = maccatalyst.dev.ayden.ios.Dolalr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
