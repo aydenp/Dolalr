@@ -26,6 +26,12 @@ extension NumberFormatter {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.currencySymbol = ""
+        formatter.internationalCurrencySymbol = ""
+        formatter.positivePrefix = ""
+        formatter.positiveSuffix = ""
+        formatter.negativePrefix = "-"
+        formatter.negativeSuffix = ""
+        formatter.currencyGroupingSeparator = ""
         formatter.groupingSeparator = ""
         return formatter
     }()
