@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateUIState), name: Stopwatch.stateChangedNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(showRateAlert), name: StopwatchUIStateManager.requestSetRateNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(rateButtonTapped), name: StopwatchUIStateManager.requestSetRateNotification, object: nil)
         NSUbiquitousKeyValueStore.default.synchronize()
         
         // Use monospaced fonts for our digit labels since they change so much (wish I could do this in nib)
@@ -49,20 +49,36 @@ class ViewController: UIViewController {
         }
         #endif
     }
-    
-    @objc func showRateAlert() {
+
+    @objc private func rateButtonTapped() {
+        self.showRateAlert()
+    }
+
+    func showRateAlert(inputText: String? = nil, validationErrorMessage: String? = nil) {
         // Show an alert to ask user for their desired hourly rate
-        let alert = UIAlertController.createAlert(title: "Set Rate", message: "Enter your hourly rate in your local currency:", actions: [.cancel])
+        let messages = [
+            validationErrorMessage,
+            "Enter your hourly rate in your local currency:"
+        ].compactMap { $0 }
+
+        let alert = UIAlertController.createAlert(title: "Set Rate", message: messages.joined(separator: "\n\n"), actions: [.cancel])
         
         alert.addAction(.normal("Set Rate") { _ in
-            guard let text = alert.textFields?.first?.text, let newRate = Double.from(formattedString: text, using: .rateCurrencyFormatter) else { return }
-            Settings.hourlyRate = newRate
+            guard let text = alert.textFields?.first?.text else { return }
+            if let newRate = Double.from(formattedString: text, using: .rateCurrencyFormatter) {
+                Settings.hourlyRate = newRate
+            } else {
+                self.showRateAlert(
+                    inputText: text,
+                    validationErrorMessage: "Invalid amount. Please enter in the format: \"\(1234.56.format(using: .rateCurrencyFormatter)!)\"."
+                )
+            }
         })
         
         alert.addTextField { (textField) in
             textField.keyboardType = .decimalPad
             textField.placeholder = Double.zero.format(using: .rateCurrencyFormatter)
-            textField.text = Settings.hourlyRate.format(using: .rateCurrencyFormatter)
+            textField.text = inputText ?? Settings.hourlyRate.format(using: .rateCurrencyFormatter)
         }
         
         present(alert, animated: true, completion: nil)
